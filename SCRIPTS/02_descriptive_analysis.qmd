@@ -1,0 +1,33 @@
+---
+title: "Descriptive Analysis"
+subtitle: "Suicide Structural Determinants - COVID-19 Pandemic"
+author: "Tu nombre"
+date: today
+format: html
+editor: visual
+---
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(knitr)
+library(kableExtra)
+
+# Cargar dataset analítico
+dataset <- read_csv("../DATA/CLEAN/dataset_analitico_final.csv")
+
+# Agregar región geográfica
+dataset <- dataset %>%
+  mutate(region = countrycode::countrycode(iso3, 
+                                           origin = "iso3c", 
+                                           destination = "region"))
+
+cat("Dataset cargado:", nrow(dataset), "países\n")
+glimpse(dataset)
+```
