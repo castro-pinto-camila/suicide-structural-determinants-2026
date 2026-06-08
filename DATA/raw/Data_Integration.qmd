@@ -1,0 +1,116 @@
+---
+title: "Structural Determinants of Heterogeneous Suicide Mortality Trends"
+subtitle: "Data Integration Script"
+author: "Tu nombre"
+date: today
+format: html
+editor: visual
+---
+
+## Setup — Cargar paquetes
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readxl)
+library(countrycode)
+library(janitor)
+```
+
+## 1. Tasas de suicidio (WHO GHE)
+
+```{r}
+suicide <- read_csv("../DATA/RAW/MORTALIDAD.csv") %>%
+  clean_names() %>%
+  select(
+    iso3 = spatial_dim_value_code,
+    country = location,
+    year = period,
+    suicide_rate = fact_value_numeric
+  ) %>%
+  filter(year >= 2010 & year <= 2021)
+
+cat("Países:", n_distinct(suicide$iso3), "\n")
+cat("Filas:", nrow(suicide), "\n")
+glimpse(suicide)
+```
+
+## 2. Psiquiatras (WHO Mental Health Atlas)
+
+```{r}
+psychiatrists <- read_csv("../DATA/RAW/02_psychiatrists_WHO_atlas_clean.csv") %>%
+  clean_names() %>%
+  select(
+    iso3 = spatial_dim_value_code,
+    country = location,
+    year_atlas = period,
+    psychiatrists_per_100k = fact_value_numeric
+  )
+
+cat("Países:", nrow(psychiatrists), "\n")
+glimpse(psychiatrists)
+```
+
+## 3. UHC Index (WHO)
+
+```{r}
+uhc <- read_csv("../DATA/RAW/03_uhc_index_WHO_clean.csv") %>%
+  clean_names() %>%
+  select(
+    country = geo_nam,
+    year = dim_time,
+    uhc_index = index_n
+  ) %>%
+  filter(year >= 2010 & year <= 2021)
+
+cat("Filas:", nrow(uhc), "\n")
+glimpse(uhc)
+```
+
+## 4. Exceso de mortalidad COVID (WHO)
+
+```{r}
+excess_mortality <- read_csv("../DATA/RAW/10_WHO_excess_mortality_COVID_by_country_clean.csv") %>%
+  clean_names() %>%
+  select(
+    iso3,
+    country,
+    excess_mortality_covid = excess_mean
+  )
+
+cat("Países:", nrow(excess_mortality), "\n")
+glimpse(excess_mortality)
+```
+
+## 5. Clasificación de ingresos (World Bank OGHIST)
+
+```{r}
+income <- read_excel("../DATA/RAW/08_worldbank_income_OGHIST.xlsx",
+                     sheet = "Country Analytical History",
+                     skip = 5) %>%
+  clean_names() %>%
+  rename(iso3 = x1, country_name = x2) %>%
+  select(iso3, country_name, starts_with("fy")) %>%
+  pivot_longer(
+    cols = starts_with("fy"),
+    names_to = "fiscal_year",
+    values_to = "income_group"
+  ) %>%
+  mutate(
+    year = as.numeric(str_extract(fiscal_year, "\\d+")) + 1,
+    income_group = case_when(
+      income_group == "H"  ~ "High income",
+      income_group == "UM" ~ "Upper middle income",
+      income_group == "LM" ~ "Lower middle income",
+      income_group == "L"  ~ "Low income",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(year >= 2010 & year <= 2021) %>%
+  select(iso3, year, income_group)
+
+cat("Filas:", nrow(income), "\n")
+glimpse(income)
+```

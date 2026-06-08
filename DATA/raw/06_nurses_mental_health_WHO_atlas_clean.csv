@@ -1,0 +1,128 @@
+iso3,country,year_atlas,nurses_per_100k
+CAF,Central African Republic,2017,0.022
+BDI,Burundi,2017,0.049
+TUN,Tunisia,2017,0.2
+SLE,Sierra Leone,2017,0.33
+COM,Comoros,2017,0.39
+ETH,Ethiopia,2017,1
+IRQ,Iraq,2017,1.22
+SRB,Serbia,2017,13.17
+BHR,Bahrain,2017,27.92
+LKA,Sri Lanka,2017,3.28
+MHL,Marshall Islands,2017,3.77
+VCT,Saint Vincent and the Grenadines,2017,4.57
+GNQ,Equatorial Guinea,2017,5.1
+FIN,Finland,2017,51.97
+CAN,Canada,2017,68.66
+SWZ,Eswatini,2017,9.1
+IRN,Iran (Islamic Republic of),2017,9.45
+FRA,France,2017,98.02
+COL,Colombia,2016,0
+SSD,South Sudan,2016,0.017
+TCD,Chad,2016,0.021
+ECU,Ecuador,2016,0.056
+MLI,Mali,2016,0.092
+AFG,Afghanistan,2016,0.098
+NER,Niger,2016,0.13
+BTN,Bhutan,2016,0.13
+HTI,Haiti,2016,0.23
+SEN,Senegal,2016,0.27
+TGO,Togo,2016,0.27
+KHM,Cambodia,2016,0.28
+GMB,Gambia,2016,0.3
+MDG,Madagascar,2016,0.31
+MMR,Myanmar,2016,0.32
+YEM,Yemen,2016,0.32
+CIV,Cote d'Ivoire,2016,0.38
+COG,Congo,2016,0.5
+GAB,Gabon,2016,0.52
+NPL,Nepal,2016,0.56
+BFA,Burkina Faso,2016,0.63
+AGO,Angola,2016,0.66
+GNB,Guinea-Bissau,2016,0.79
+IND,India,2016,0.8
+BGD,Bangladesh,2016,0.87
+NAM,Namibia,2016,0.91
+GRD,Grenada,2016,0.94
+SYR,Syrian Arab Republic,2016,1.07
+GTM,Guatemala,2016,1.07
+TLS,Timor-Leste,2016,1.37
+RWA,Rwanda,2016,1.38
+ZMB,Zambia,2016,1.43
+FJI,Fiji,2016,1.46
+TJK,Tajikistan,2016,1.5
+WSM,Samoa,2016,1.55
+CHL,Chile,2016,1.88
+SAU,Saudi Arabia,2016,10.66
+ARM,Armenia,2016,11.24
+COK,Cook Islands,2016,11.46
+GRC,Greece,2016,12.75
+KOR,Republic of Korea,2016,13.66
+BRN,Brunei Darussalam,2016,15.09
+TUR,Türkiye,2016,150.3
+SUR,Suriname,2016,16.63
+TON,Tonga,2016,16.92
+BGR,Bulgaria,2016,17.74
+MNE,Montenegro,2016,18.31
+ROU,Romania,2016,18.71
+ERI,Eritrea,2016,2.17
+MEX,Mexico,2016,2.24
+UGA,Uganda,2016,2.24
+MAR,Morocco,2016,2.45
+IDN,Indonesia,2016,2.52
+EST,Estonia,2016,23.48
+JOR,Jordan,2016,3.3
+BLZ,Belize,2016,3.34
+PAN,Panama,2016,3.45
+ZWE,Zimbabwe,2016,3.49
+POL,Poland,2016,30.92
+HUN,Hungary,2016,33.74
+BRA,Brazil,2016,34.95
+SVN,Slovenia,2016,36.73
+MNG,Mongolia,2016,4.2
+USA,United States of America,2016,4.28
+ARE,United Arab Emirates,2016,4.37
+VUT,Vanuatu,2016,4.54
+STP,Sao Tome and Principe,2016,4.6
+EGY,Egypt,2016,4.8
+HRV,Croatia,2016,41.86
+LTU,Lithuania,2016,49.76
+CRI,Costa Rica,2016,5.7
+GEO,Georgia,2016,5.92
+PER,Peru,2016,5.99
+SWE,Sweden,2016,50.57
+LCA,Saint Lucia,2016,50.79
+LBR,Liberia,2016,6.4
+AZE,Azerbaijan,2016,6.72
+MYS,Malaysia,2016,6.84
+ALB,Albania,2016,6.88
+ATG,Antigua and Barbuda,2016,7.01
+KGZ,Kyrgyzstan,2016,7.37
+THA,Thailand,2016,7.42
+GHA,Ghana,2016,7.73
+NZL,New Zealand,2016,75.13
+SYC,Seychelles,2016,8.53
+NRU,Nauru,2016,8.88
+CUB,Cuba,2016,8.9
+MCO,Monaco,2016,83.54
+JPN,Japan,2016,83.81
+UZB,Uzbekistan,2016,9.21
+QAT,Qatar,2016,9.93
+TZA,United Republic of Tanzania,2015,0.36
+JAM,Jamaica,2015,10.27
+MDA,Republic of Moldova,2015,14.83
+KIR,Kiribati,2015,2.67
+ESP,Spain,2015,2.87
+BIH,Bosnia and Herzegovina,2015,22.14
+LVA,Latvia,2015,22.83
+ITA,Italy,2015,23.49
+OMN,Oman,2015,3
+LBN,Lebanon,2015,3.14
+CZE,Czechia,2015,30.35
+CYP,Cyprus,2015,34.97
+CHN,China,2015,5.42
+BRB,Barbados,2015,63.33
+AUS,Australia,2015,90.58
+CHE,Switzerland,2015,92.66
+MRT,Mauritania,2013,0.22
+BEL,Belgium,2013,125.7

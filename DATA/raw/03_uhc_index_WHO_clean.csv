@@ -1,0 +1,1051 @@
+DIM_TIME,GEO_NAME,INDEX_N
+2017,Cameroon,43
+2017,Canada,80
+2017,Cabo Verde,70
+2017,Central African Republic,30
+2017,Asia,67
+2017,Sri Lanka,65
+2017,Chad,28
+2017,Europe,82
+2017,Chile,80
+2017,China,79
+2017,Colombia,80
+2017,Comoros,46
+2017,Congo,36
+2017,Democratic Republic of the Congo,40
+2017,Cook Islands,63
+2017,Costa Rica,80
+2017,Croatia,79
+2017,Cuba,80
+2017,Cyprus,80
+2017,Czechia,80
+2017,Benin,34
+2017,Denmark,80
+2017,Dominica,70
+2017,Dominican Republic,75
+2017,Ecuador,78
+2017,El Salvador,78
+2017,Equatorial Guinea,44
+2017,Ethiopia,35
+2017,Eritrea,46
+2017,Estonia,78
+2017,Fiji,59
+2017,Finland,80
+2017,France,80
+2017,Djibouti,45
+2017,Gabon,51
+2017,Georgia,70
+2017,Gambia,44
+2017,Germany,80
+2017,Ghana,45
+2017,Kiribati,47
+2017,Greece,79
+2017,Grenada,73
+2017,Guatemala,58
+2017,Guinea,36
+2017,Guyana,77
+2017,Haiti,53
+2017,Honduras,65
+2017,Hungary,79
+2017,Iceland,80
+2017,India,60
+2017,Indonesia,54
+2017,Iran (Islamic Republic of),72
+2017,Iraq,57
+2017,Ireland,80
+2017,Israel,80
+2017,Italy,80
+2017,Côte d'Ivoire,44
+2017,Jamaica,75
+2017,Japan,80
+2017,Kazakhstan,79
+2017,Jordan,70
+2017,Kenya,52
+2017,Democratic People's Republic of Korea,73
+2017,Republic of Korea,80
+2017,Kuwait,78
+2017,Kyrgyzstan,71
+2017,Lao People's Democratic Republic,51
+2017,Lebanon,73
+2017,Lesotho,56
+2017,Latvia,75
+2017,Liberia,40
+2017,Libya,66
+2017,Lithuania,72
+2017,Luxembourg,80
+2017,Madagascar,30
+2017,Malawi,48
+2017,Malaysia,77
+2017,Maldives,71
+2017,Mali,38
+2017,Malta,80
+2017,Mauritania,39
+2017,Mauritius,68
+2017,Mexico,74
+2017,Monaco,80
+2017,Mongolia,67
+2017,Republic of Moldova,71
+2017,Montenegro,71
+2017,Morocco,69
+2015,Sao Tome and Principe,52
+2015,Saudi Arabia,71
+2015,Senegal,45
+2015,Serbia,72
+2015,Seychelles,73
+2015,Sierra Leone,35
+2015,Singapore,80
+2015,Slovakia,80
+2015,Viet Nam,68
+2015,Slovenia,80
+2015,Somalia,21
+2015,South Africa,70
+2015,Zimbabwe,56
+2015,Spain,80
+2015,South Sudan,27
+2015,Sudan,43
+2015,Suriname,71
+2015,Eswatini,55
+2015,Sweden,80
+2015,Switzerland,80
+2015,Syrian Arab Republic,60
+2015,Tajikistan,68
+2015,Thailand,76
+2015,Togo,40
+2015,Tonga,54
+2015,Trinidad and Tobago,77
+2015,United Arab Emirates,72
+2015,Tunisia,63
+2015,Türkiye,76
+2015,Turkmenistan,72
+2015,Tuvalu,52
+2015,Uganda,43
+2015,Ukraine,69
+2015,North Macedonia,73
+2015,Egypt,65
+2015,United Kingdom of Great Britain and Northern Ireland,80
+2015,United Republic of Tanzania,38
+2015,United States of America,80
+2015,Burkina Faso,35
+2015,Uruguay,80
+2015,Uzbekistan,73
+2015,Venezuela (Bolivarian Republic of),77
+2015,Samoa,53
+2015,Yemen,39
+2015,Zambia,52
+2015,High-income economies,84
+2015,Low-income economies,37
+2015,Lower-middle-income economies,54
+2015,Upper-middle-income economies,75
+2015,Africa,42
+2015,Americas,80
+2015,South-East Asia,56
+2015,Europe,79
+2015,Eastern Mediterranean,53
+2015,Western Pacific,75
+2017,World,67
+2017,Africa,47
+2017,Afghanistan,41
+2017,Albania,61
+2017,Oceania,73
+2017,Algeria,74
+2017,Americas,81
+2017,Andorra,76
+2017,Angola,40
+2017,Antigua and Barbuda,77
+2017,Azerbaijan,64
+2017,Argentina,79
+2017,Australia,80
+2017,Austria,80
+2017,Bahamas,79
+2017,Bahrain,74
+2017,Bangladesh,48
+2017,Armenia,69
+2017,Barbados,80
+2017,Belgium,80
+2017,Bhutan,56
+2017,Bolivia (Plurinational State of),64
+2017,Bosnia and Herzegovina,70
+2017,Botswana,58
+2017,Brazil,80
+2017,Belize,68
+2017,Solomon Islands,47
+2017,Brunei Darussalam,78
+2017,Bulgaria,72
+2017,Myanmar,54
+2017,Burundi,40
+2017,Belarus,78
+2017,Cambodia,60
+2015,Gabon,50
+2015,Georgia,71
+2015,Gambia,43
+2015,Germany,80
+2015,Ghana,44
+2015,Kiribati,45
+2015,Greece,78
+2015,Grenada,71
+2015,Guatemala,60
+2015,Guinea,33
+2015,Guyana,75
+2015,Haiti,51
+2015,Honduras,65
+2015,Hungary,78
+2015,Iceland,80
+2015,India,57
+2015,Indonesia,50
+2015,Iran (Islamic Republic of),68
+2015,Iraq,56
+2015,Ireland,80
+2015,Israel,80
+2015,Italy,80
+2015,Côte d'Ivoire,43
+2015,Jamaica,74
+2015,Japan,80
+2015,Kazakhstan,77
+2015,Jordan,70
+2015,Kenya,50
+2015,Democratic People's Republic of Korea,43
+2015,Republic of Korea,80
+2015,Kuwait,77
+2015,Kyrgyzstan,69
+2015,Lao People's Democratic Republic,47
+2015,Lebanon,71
+2015,Lesotho,54
+2015,Latvia,70
+2015,Liberia,37
+2015,Libya,61
+2015,Lithuania,70
+2015,Luxembourg,80
+2015,Madagascar,29
+2015,Malawi,42
+2015,Malaysia,75
+2015,Maldives,64
+2015,Mali,36
+2015,Malta,80
+2015,Mauritania,33
+2015,Mauritius,67
+2015,Mexico,74
+2015,Monaco,80
+2015,Mongolia,66
+2015,Republic of Moldova,70
+2015,Montenegro,69
+2015,Morocco,65
+2015,Mozambique,40
+2015,Oman,69
+2015,Namibia,63
+2015,Nauru,57
+2015,Nepal,47
+2015,Netherlands (Kingdom of the),80
+2015,Vanuatu,45
+2015,New Zealand,80
+2015,Nicaragua,71
+2015,Niger,32
+2015,Nigeria,39
+2015,Niue,59
+2015,Norway,80
+2015,Micronesia (Federated States of),46
+2015,Marshall Islands,60
+2015,Palau,65
+2015,Pakistan,40
+2015,Panama,75
+2015,Papua New Guinea,36
+2015,Paraguay,72
+2015,Peru,76
+2015,Philippines,57
+2015,Poland,80
+2015,Portugal,80
+2015,Guinea-Bissau,37
+2015,Timor-Leste,47
+2015,Qatar,73
+2015,Romania,78
+2015,Russian Federation,74
+2015,Rwanda,44
+2015,Saint Kitts and Nevis,76
+2015,Saint Lucia,74
+2015,Saint Vincent and the Grenadines,72
+2015,San Marino,79
+2021,Peru,71
+2021,Philippines,58
+2021,Poland,80
+2021,Portugal,80
+2021,Guinea-Bissau,37
+2021,Timor-Leste,52
+2021,Qatar,76
+2021,Romania,78
+2021,Russian Federation,79
+2021,Rwanda,49
+2021,Saint Kitts and Nevis,79
+2021,Saint Lucia,77
+2021,Saint Vincent and the Grenadines,69
+2021,San Marino,77
+2021,Sao Tome and Principe,59
+2021,Saudi Arabia,74
+2021,Senegal,50
+2021,Serbia,72
+2021,Seychelles,75
+2021,Sierra Leone,41
+2021,Singapore,80
+2021,Slovakia,80
+2021,Viet Nam,68
+2021,Slovenia,80
+2021,Somalia,27
+2021,South Africa,71
+2021,Zimbabwe,55
+2021,Spain,80
+2021,South Sudan,34
+2021,Sudan,44
+2021,Suriname,63
+2021,Eswatini,56
+2021,Sweden,80
+2021,Switzerland,80
+2021,Syrian Arab Republic,64
+2021,Tajikistan,67
+2021,Thailand,80
+2021,Togo,44
+2021,Tonga,57
+2021,Trinidad and Tobago,75
+2021,United Arab Emirates,80
+2021,Tunisia,67
+2021,Türkiye,76
+2021,Turkmenistan,75
+2021,Tuvalu,52
+2021,Uganda,49
+2021,Ukraine,76
+2021,North Macedonia,74
+2021,Egypt,70
+2021,United Kingdom of Great Britain and Northern Ireland,80
+2021,United Republic of Tanzania,43
+2021,United States of America,80
+2021,Burkina Faso,40
+2021,Uruguay,80
+2021,Uzbekistan,75
+2021,Venezuela (Bolivarian Republic of),75
+2021,Samoa,55
+2021,Yemen,42
+2021,Zambia,56
+2021,High-income economies,85
+2021,Low-income economies,42
+2021,Lower-middle-income economies,58
+2021,Upper-middle-income economies,79
+2021,Africa,44
+2021,Americas,80
+2021,South-East Asia,62
+2021,Europe,81
+2021,Eastern Mediterranean,57
+2021,Western Pacific,79
+2010,Egypt,62
+2010,United Kingdom of Great Britain and Northern Ireland,80
+2010,United Republic of Tanzania,33
+2010,United States of America,80
+2010,Burkina Faso,30
+2010,Uruguay,78
+2010,Uzbekistan,68
+2010,Venezuela (Bolivarian Republic of),67
+2010,Samoa,48
+2010,Yemen,39
+2010,Zambia,45
+2010,High-income economies,81
+2010,Low-income economies,35
+2010,Lower-middle-income economies,47
+2010,Upper-middle-income economies,67
+2010,Africa,36
+2010,Americas,75
+2010,South-East Asia,47
+2010,Europe,75
+2010,Eastern Mediterranean,47
+2010,Western Pacific,66
+2015,World,65
+2015,Africa,45
+2015,Afghanistan,36
+2015,Albania,61
+2015,Oceania,73
+2015,Algeria,74
+2015,Americas,80
+2015,Andorra,75
+2015,Angola,36
+2015,Antigua and Barbuda,78
+2015,Azerbaijan,62
+2015,Argentina,80
+2015,Australia,80
+2015,Austria,80
+2015,Bahamas,77
+2015,Bahrain,73
+2015,Bangladesh,45
+2015,Armenia,67
+2015,Barbados,80
+2015,Belgium,80
+2015,Bhutan,53
+2015,Bolivia (Plurinational State of),60
+2015,Bosnia and Herzegovina,68
+2015,Botswana,58
+2015,Brazil,80
+2015,Belize,69
+2015,Solomon Islands,45
+2015,Brunei Darussalam,75
+2015,Bulgaria,70
+2015,Myanmar,53
+2015,Burundi,40
+2015,Belarus,76
+2015,Cambodia,56
+2015,Cameroon,42
+2015,Canada,80
+2015,Cabo Verde,68
+2015,Central African Republic,30
+2015,Asia,64
+2015,Sri Lanka,61
+2015,Chad,27
+2015,Europe,80
+2015,Chile,79
+2015,China,76
+2015,Colombia,78
+2015,Comoros,44
+2015,Congo,38
+2015,Democratic Republic of the Congo,37
+2015,Cook Islands,63
+2015,Costa Rica,77
+2015,Croatia,78
+2015,Cuba,80
+2015,Cyprus,78
+2015,Czechia,80
+2015,Benin,35
+2015,Denmark,80
+2015,Dominica,70
+2015,Dominican Republic,75
+2015,Ecuador,77
+2015,El Salvador,77
+2015,Equatorial Guinea,41
+2015,Ethiopia,34
+2015,Eritrea,45
+2015,Estonia,77
+2015,Fiji,60
+2015,Finland,80
+2015,France,80
+2015,Djibouti,41
+2021,Benin,38
+2021,Denmark,80
+2021,Dominica,49
+2021,Dominican Republic,77
+2021,Ecuador,77
+2021,El Salvador,78
+2021,Equatorial Guinea,46
+2021,Ethiopia,35
+2021,Eritrea,45
+2021,Estonia,79
+2021,Fiji,58
+2021,Finland,80
+2021,France,80
+2021,Djibouti,44
+2021,Gabon,49
+2021,Georgia,68
+2021,Gambia,46
+2021,Germany,80
+2021,Ghana,48
+2021,Kiribati,48
+2021,Greece,77
+2021,Grenada,70
+2021,Guatemala,59
+2021,Guinea,40
+2021,Guyana,76
+2021,Haiti,54
+2021,Honduras,64
+2021,Hungary,79
+2021,Iceland,80
+2021,India,63
+2021,Indonesia,55
+2021,Iran (Islamic Republic of),74
+2021,Iraq,59
+2021,Ireland,80
+2021,Israel,80
+2021,Italy,80
+2021,Côte d'Ivoire,43
+2021,Jamaica,74
+2021,Japan,80
+2021,Kazakhstan,80
+2021,Jordan,65
+2021,Kenya,53
+2021,Democratic People's Republic of Korea,68
+2021,Republic of Korea,80
+2021,Kuwait,78
+2021,Kyrgyzstan,69
+2021,Lao People's Democratic Republic,52
+2021,Lebanon,73
+2021,Lesotho,53
+2021,Latvia,75
+2021,Liberia,45
+2021,Libya,62
+2021,Lithuania,75
+2021,Luxembourg,80
+2021,Madagascar,35
+2021,Malawi,48
+2021,Malaysia,76
+2021,Maldives,61
+2021,Mali,41
+2021,Malta,80
+2021,Mauritania,40
+2021,Mauritius,66
+2021,Mexico,75
+2021,Monaco,80
+2021,Mongolia,65
+2021,Republic of Moldova,71
+2021,Montenegro,72
+2021,Morocco,69
+2021,Mozambique,44
+2021,Oman,70
+2021,Namibia,63
+2021,Nauru,60
+2021,Nepal,54
+2021,Netherlands (Kingdom of the),80
+2021,Vanuatu,47
+2021,New Zealand,80
+2021,Nicaragua,70
+2021,Niger,35
+2021,Nigeria,38
+2021,Niue,44
+2021,Norway,80
+2021,Micronesia (Federated States of),48
+2021,Marshall Islands,59
+2021,Palau,65
+2021,Pakistan,45
+2021,Panama,78
+2021,Papua New Guinea,30
+2021,Paraguay,72
+2010,Lesotho,45
+2010,Latvia,65
+2010,Liberia,33
+2010,Libya,62
+2010,Lithuania,63
+2010,Luxembourg,77
+2010,Madagascar,25
+2010,Malawi,38
+2010,Malaysia,69
+2010,Maldives,58
+2010,Mali,35
+2010,Malta,79
+2010,Mauritania,32
+2010,Mauritius,59
+2010,Mexico,66
+2010,Monaco,80
+2010,Mongolia,59
+2010,Republic of Moldova,63
+2010,Montenegro,67
+2010,Morocco,58
+2010,Mozambique,31
+2010,Oman,67
+2010,Namibia,57
+2010,Nauru,52
+2010,Nepal,37
+2010,Netherlands (Kingdom of the),80
+2010,Vanuatu,38
+2010,New Zealand,80
+2010,Nicaragua,66
+2010,Niger,30
+2010,Nigeria,34
+2010,Niue,53
+2010,Norway,80
+2010,Micronesia (Federated States of),47
+2010,Marshall Islands,57
+2010,Palau,58
+2010,Pakistan,33
+2010,Panama,72
+2010,Papua New Guinea,33
+2010,Paraguay,68
+2010,Peru,70
+2010,Philippines,48
+2010,Poland,75
+2010,Portugal,80
+2010,Guinea-Bissau,29
+2010,Timor-Leste,41
+2010,Qatar,67
+2010,Romania,74
+2010,Russian Federation,70
+2010,Rwanda,39
+2010,Saint Kitts and Nevis,72
+2010,Saint Lucia,68
+2010,Saint Vincent and the Grenadines,68
+2010,San Marino,75
+2010,Sao Tome and Principe,47
+2010,Saudi Arabia,69
+2010,Senegal,37
+2010,Serbia,63
+2010,Seychelles,59
+2010,Sierra Leone,27
+2010,Singapore,80
+2010,Slovakia,76
+2010,Viet Nam,59
+2010,Slovenia,77
+2010,Somalia,17
+2010,South Africa,63
+2010,Zimbabwe,46
+2010,Spain,78
+2010,South Sudan,23
+2010,Sudan,36
+2010,Suriname,65
+2010,Eswatini,51
+2010,Sweden,80
+2010,Switzerland,80
+2010,Syrian Arab Republic,58
+2010,Tajikistan,58
+2010,Thailand,68
+2010,Togo,30
+2010,Tonga,53
+2010,Trinidad and Tobago,72
+2010,United Arab Emirates,62
+2010,Tunisia,61
+2010,Türkiye,66
+2010,Turkmenistan,68
+2010,Tuvalu,49
+2010,Uganda,36
+2010,Ukraine,65
+2010,North Macedonia,64
+2019,Syrian Arab Republic,62
+2019,Tajikistan,70
+2019,Thailand,80
+2019,Togo,41
+2019,Tonga,57
+2019,Trinidad and Tobago,76
+2019,United Arab Emirates,75
+2019,Tunisia,68
+2019,Türkiye,77
+2019,Turkmenistan,74
+2019,Tuvalu,52
+2019,Uganda,48
+2019,Ukraine,77
+2019,North Macedonia,74
+2019,Egypt,70
+2019,United Kingdom of Great Britain and Northern Ireland,80
+2019,United Republic of Tanzania,42
+2019,United States of America,80
+2019,Burkina Faso,38
+2019,Uruguay,80
+2019,Uzbekistan,75
+2019,Venezuela (Bolivarian Republic of),74
+2019,Samoa,55
+2019,Yemen,42
+2019,Zambia,54
+2019,High-income economies,85
+2019,Low-income economies,42
+2019,Lower-middle-income economies,59
+2019,Upper-middle-income economies,77
+2019,Africa,45
+2019,Americas,80
+2019,South-East Asia,62
+2019,Europe,81
+2019,Eastern Mediterranean,57
+2019,Western Pacific,79
+2021,World,68
+2021,Africa,47
+2021,Afghanistan,41
+2021,Albania,64
+2021,Oceania,72
+2021,Algeria,74
+2021,Americas,80
+2021,Andorra,79
+2021,Angola,37
+2021,Antigua and Barbuda,76
+2021,Azerbaijan,66
+2021,Argentina,79
+2021,Australia,80
+2021,Austria,80
+2021,Bahamas,77
+2021,Bahrain,76
+2021,Bangladesh,52
+2021,Armenia,68
+2021,Barbados,77
+2021,Belgium,80
+2021,Bhutan,60
+2021,Bolivia (Plurinational State of),65
+2021,Bosnia and Herzegovina,66
+2021,Botswana,55
+2021,Brazil,80
+2021,Belize,68
+2021,Solomon Islands,47
+2021,Brunei Darussalam,78
+2021,Bulgaria,73
+2021,Myanmar,52
+2021,Burundi,41
+2021,Belarus,79
+2021,Cambodia,58
+2021,Cameroon,44
+2021,Canada,80
+2021,Cabo Verde,71
+2021,Central African Republic,32
+2021,Asia,68
+2021,Sri Lanka,67
+2021,Chad,29
+2021,Europe,83
+2021,Chile,80
+2021,China,80
+2021,Colombia,80
+2021,Comoros,48
+2021,Congo,41
+2021,Democratic Republic of the Congo,42
+2021,Cook Islands,46
+2021,Costa Rica,80
+2021,Croatia,80
+2021,Cuba,80
+2021,Cyprus,80
+2021,Czechia,80
+2010,Austria,80
+2010,Bahamas,73
+2010,Bahrain,68
+2010,Bangladesh,37
+2010,Armenia,60
+2010,Barbados,75
+2010,Belgium,80
+2010,Bhutan,44
+2010,Bolivia (Plurinational State of),47
+2010,Bosnia and Herzegovina,62
+2010,Botswana,54
+2010,Brazil,76
+2010,Belize,64
+2010,Solomon Islands,40
+2010,Brunei Darussalam,70
+2010,Bulgaria,65
+2010,Myanmar,45
+2010,Burundi,33
+2010,Belarus,70
+2010,Cambodia,50
+2010,Cameroon,33
+2010,Canada,80
+2010,Cabo Verde,63
+2010,Central African Republic,26
+2010,Asia,56
+2010,Sri Lanka,55
+2010,Chad,22
+2010,Europe,77
+2010,Chile,77
+2010,China,66
+2010,Colombia,68
+2010,Comoros,39
+2010,Congo,30
+2010,Democratic Republic of the Congo,30
+2010,Cook Islands,61
+2010,Costa Rica,75
+2010,Croatia,77
+2010,Cuba,78
+2010,Cyprus,70
+2010,Czechia,80
+2010,Benin,33
+2010,Denmark,77
+2010,Dominica,66
+2010,Dominican Republic,70
+2010,Ecuador,68
+2010,El Salvador,73
+2010,Equatorial Guinea,29
+2010,Ethiopia,27
+2010,Eritrea,40
+2010,Estonia,72
+2010,Fiji,52
+2010,Finland,80
+2010,France,80
+2010,Djibouti,37
+2010,Gabon,45
+2010,Georgia,69
+2010,Gambia,41
+2010,Germany,80
+2010,Ghana,35
+2010,Kiribati,41
+2010,Greece,75
+2010,Grenada,68
+2010,Guatemala,58
+2010,Guinea,26
+2010,Guyana,65
+2010,Haiti,42
+2010,Honduras,58
+2010,Hungary,73
+2010,Iceland,80
+2010,India,49
+2010,Indonesia,42
+2010,Iran (Islamic Republic of),54
+2010,Iraq,53
+2010,Ireland,77
+2010,Israel,79
+2010,Italy,80
+2010,Côte d'Ivoire,33
+2010,Jamaica,66
+2010,Japan,80
+2010,Kazakhstan,70
+2010,Jordan,72
+2010,Kenya,44
+2010,Democratic People's Republic of Korea,53
+2010,Republic of Korea,80
+2010,Kuwait,74
+2010,Kyrgyzstan,59
+2010,Lao People's Democratic Republic,40
+2010,Lebanon,67
+2019,Israel,80
+2019,Italy,80
+2019,Côte d'Ivoire,41
+2019,Jamaica,77
+2019,Japan,80
+2019,Kazakhstan,80
+2019,Jordan,67
+2019,Kenya,51
+2019,Democratic People's Republic of Korea,72
+2019,Republic of Korea,80
+2019,Kuwait,77
+2019,Kyrgyzstan,71
+2019,Lao People's Democratic Republic,51
+2019,Lebanon,74
+2019,Lesotho,53
+2019,Latvia,76
+2019,Liberia,43
+2019,Libya,64
+2019,Lithuania,75
+2019,Luxembourg,80
+2019,Madagascar,33
+2019,Malawi,48
+2019,Malaysia,78
+2019,Maldives,68
+2019,Mali,40
+2019,Malta,80
+2019,Mauritania,36
+2019,Mauritius,68
+2019,Mexico,74
+2019,Monaco,80
+2019,Mongolia,67
+2019,Republic of Moldova,72
+2019,Montenegro,72
+2019,Morocco,68
+2019,Mozambique,43
+2019,Oman,70
+2019,Namibia,62
+2019,Nauru,60
+2019,Nepal,50
+2019,Netherlands (Kingdom of the),80
+2019,Vanuatu,46
+2019,New Zealand,80
+2019,Nicaragua,73
+2019,Niger,34
+2019,Nigeria,43
+2019,Niue,63
+2019,Norway,80
+2019,Micronesia (Federated States of),46
+2019,Marshall Islands,61
+2019,Palau,66
+2019,Pakistan,44
+2019,Panama,79
+2019,Papua New Guinea,30
+2019,Paraguay,74
+2019,Peru,75
+2019,Philippines,60
+2019,Poland,80
+2019,Portugal,80
+2019,Guinea-Bissau,36
+2019,Timor-Leste,50
+2019,Qatar,75
+2019,Romania,79
+2019,Russian Federation,79
+2019,Rwanda,47
+2019,Saint Kitts and Nevis,77
+2019,Saint Lucia,77
+2019,Saint Vincent and the Grenadines,76
+2019,San Marino,77
+2019,Sao Tome and Principe,60
+2019,Saudi Arabia,72
+2019,Senegal,51
+2019,Serbia,77
+2019,Seychelles,74
+2019,Sierra Leone,38
+2019,Singapore,80
+2019,Slovakia,80
+2019,Viet Nam,69
+2019,Slovenia,80
+2019,Somalia,26
+2019,South Africa,71
+2019,Zimbabwe,55
+2019,Spain,80
+2019,South Sudan,31
+2019,Sudan,45
+2019,Suriname,72
+2019,Eswatini,58
+2019,Sweden,80
+2019,Switzerland,80
+2010,World,58
+2010,Africa,39
+2010,Afghanistan,29
+2010,Albania,57
+2010,Oceania,71
+2010,Algeria,67
+2010,Americas,75
+2010,Andorra,74
+2010,Angola,31
+2010,Antigua and Barbuda,73
+2010,Azerbaijan,51
+2010,Argentina,76
+2010,Australia,80
+2017,Western Pacific,78
+2019,World,68
+2019,Africa,47
+2019,Afghanistan,42
+2019,Albania,64
+2019,Oceania,72
+2019,Algeria,74
+2019,Americas,80
+2019,Andorra,78
+2019,Angola,39
+2019,Antigua and Barbuda,75
+2019,Azerbaijan,67
+2019,Argentina,78
+2019,Australia,80
+2019,Austria,80
+2019,Bahamas,79
+2019,Bahrain,76
+2019,Bangladesh,50
+2019,Armenia,70
+2019,Barbados,79
+2019,Belgium,80
+2019,Bhutan,60
+2019,Bolivia (Plurinational State of),65
+2019,Bosnia and Herzegovina,67
+2019,Botswana,55
+2019,Brazil,80
+2019,Belize,69
+2019,Solomon Islands,46
+2019,Brunei Darussalam,77
+2019,Bulgaria,76
+2019,Myanmar,60
+2019,Burundi,42
+2019,Belarus,80
+2019,Cambodia,58
+2019,Cameroon,43
+2019,Canada,80
+2019,Cabo Verde,69
+2019,Central African Republic,31
+2019,Asia,69
+2019,Sri Lanka,66
+2019,Chad,27
+2019,Europe,83
+2019,Chile,80
+2019,China,80
+2019,Colombia,80
+2019,Comoros,46
+2019,Congo,39
+2019,Democratic Republic of the Congo,40
+2019,Cook Islands,63
+2019,Costa Rica,80
+2019,Croatia,80
+2019,Cuba,80
+2019,Cyprus,80
+2019,Czechia,80
+2019,Benin,35
+2019,Denmark,80
+2019,Dominica,72
+2019,Dominican Republic,75
+2019,Ecuador,79
+2019,El Salvador,78
+2019,Equatorial Guinea,44
+2019,Ethiopia,36
+2019,Eritrea,46
+2019,Estonia,79
+2019,Fiji,59
+2019,Finland,80
+2019,France,80
+2019,Djibouti,45
+2019,Gabon,49
+2019,Georgia,69
+2019,Gambia,46
+2019,Germany,80
+2019,Ghana,46
+2019,Kiribati,48
+2019,Greece,79
+2019,Grenada,74
+2019,Guatemala,61
+2019,Guinea,39
+2019,Guyana,77
+2019,Haiti,53
+2019,Honduras,66
+2019,Hungary,79
+2019,Iceland,80
+2019,India,64
+2019,Indonesia,56
+2019,Iran (Islamic Republic of),75
+2019,Iraq,58
+2019,Ireland,80
+2017,Mozambique,43
+2017,Oman,69
+2017,Namibia,63
+2017,Nauru,59
+2017,Nepal,45
+2017,Netherlands (Kingdom of the),80
+2017,Vanuatu,44
+2017,New Zealand,80
+2017,Nicaragua,73
+2017,Niger,33
+2017,Nigeria,39
+2017,Niue,61
+2017,Norway,80
+2017,Micronesia (Federated States of),49
+2017,Marshall Islands,61
+2017,Palau,67
+2017,Pakistan,43
+2017,Panama,77
+2017,Papua New Guinea,33
+2017,Paraguay,73
+2017,Peru,75
+2017,Philippines,60
+2017,Poland,80
+2017,Portugal,80
+2017,Guinea-Bissau,38
+2017,Timor-Leste,50
+2017,Qatar,72
+2017,Romania,78
+2017,Russian Federation,77
+2017,Rwanda,48
+2017,Saint Kitts and Nevis,76
+2017,Saint Lucia,74
+2017,Saint Vincent and the Grenadines,76
+2017,San Marino,80
+2017,Sao Tome and Principe,55
+2017,Saudi Arabia,73
+2017,Senegal,49
+2017,Serbia,73
+2017,Seychelles,75
+2017,Sierra Leone,39
+2017,Singapore,80
+2017,Slovakia,80
+2017,Viet Nam,70
+2017,Slovenia,80
+2017,Somalia,25
+2017,South Africa,71
+2017,Zimbabwe,57
+2017,Spain,80
+2017,South Sudan,30
+2017,Sudan,45
+2017,Suriname,72
+2017,Eswatini,60
+2017,Sweden,80
+2017,Switzerland,80
+2017,Syrian Arab Republic,62
+2017,Tajikistan,69
+2017,Thailand,80
+2017,Togo,43
+2017,Tonga,56
+2017,Trinidad and Tobago,77
+2017,United Arab Emirates,73
+2017,Tunisia,65
+2017,Türkiye,77
+2017,Turkmenistan,73
+2017,Tuvalu,52
+2017,Uganda,46
+2017,Ukraine,71
+2017,North Macedonia,74
+2017,Egypt,69
+2017,United Kingdom of Great Britain and Northern Ireland,80
+2017,United Republic of Tanzania,40
+2017,United States of America,80
+2017,Burkina Faso,38
+2017,Uruguay,80
+2017,Uzbekistan,74
+2017,Venezuela (Bolivarian Republic of),75
+2017,Samoa,54
+2017,Yemen,41
+2017,Zambia,53
+2017,High-income economies,84
+2017,Low-income economies,41
+2017,Lower-middle-income economies,56
+2017,Upper-middle-income economies,77
+2017,Africa,44
+2017,Americas,81
+2017,South-East Asia,59
+2017,Europe,81
+2017,Eastern Mediterranean,56
