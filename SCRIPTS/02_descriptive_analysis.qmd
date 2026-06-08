@@ -193,4 +193,46 @@ tabla1_final %>%
   gtsave("../OUTPUTS/Table1_suicide_structural_indicators.png",
          zoom = 2, expand = 10)
 ```
+```{r}
+## Verificación de normalidad — variables principales
 
+library(ggplot2)
+
+# Histogramas de las variables clave
+variables <- c("delta_suicide", "psychiatrists_unicef", 
+                "uhc_index_mean", "excess_mortality_per_100k",
+                "rate_pre", "rate_pandemic")
+
+par(mfrow = c(2, 3))
+
+for(var in variables) {
+  hist(dataset[[var]], 
+       main = var, 
+       xlab = var,
+       col = "steelblue",
+       border = "white")
+}
+
+# Test de Kolmogorov-Smirnov para cada variable
+cat("=== Kolmogorov-Smirnov Normality Tests ===\n")
+for(var in variables) {
+  datos <- dataset[[var]][!is.na(dataset[[var]])]
+  test <- ks.test(datos, "pnorm", 
+                  mean(datos), 
+                  sd(datos))
+  cat(var, "→ p-value:", round(test$p.value, 4), 
+      ifelse(test$p.value < 0.05, "→ NO normal ✗", 
+             "→ Normal ✓"), "\n")
+}
+```
+```{r}
+cat("=== Shapiro-Wilk Normality Tests ===\n")
+for(var in variables) {
+  datos <- dataset[[var]][!is.na(dataset[[var]])]
+  # Shapiro-Wilk requiere entre 3 y 5000 observaciones
+  test <- shapiro.test(datos)
+  cat(var, "→ p-value:", round(test$p.value, 4), 
+      ifelse(test$p.value < 0.05, "→ NO normal ✗", 
+             "→ Normal ✓"), "\n")
+}
+```
