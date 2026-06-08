@@ -22,7 +22,7 @@ library(janitor)
 ## 1. Tasas de suicidio (WHO GHE)
 
 ```{r}
-suicide <- read_csv("01_MORTALIDAD.csv") %>%
+suicide <- read_csv("../DATA/RAW/01_MORTALIDAD.csv") %>%
   clean_names() %>%
   select(
     iso3 = iso3,
@@ -40,7 +40,7 @@ glimpse(suicide)
 ## 2. Psiquiatras (WHO Mental Health Atlas)
 
 ```{r}
-psychiatrists <- read_csv("02_psychiatrists_WHO_atlas_clean.csv") 
+psychiatrists <- read_csv("../DATA/RAW/02_psychiatrists_WHO_atlas_clean.csv") 
 cat("Países:", nrow(psychiatrists), "\n")
 glimpse(psychiatrists)
 ```
@@ -48,7 +48,7 @@ glimpse(psychiatrists)
 ## 3. UHC Index (WHO)
 
 ```{r}
-uhc <- read_csv("03_uhc_index_WHO_clean.csv") %>%
+uhc <- read_csv("../DATA/RAW/03_uhc_index_WHO_clean.csv") %>%
   clean_names() %>%
   select(
     country = geo_name,    # ← minúsculas
@@ -79,7 +79,7 @@ cat("UHC países reales:", n_distinct(uhc$iso3), "\n")
 ## 4. Exceso de mortalidad COVID (WHO)
 
 ```{r}
-excess_mortality <- read_excel("10_WHO_excess_mortality_COVID_by_country_clean.xlsx",
+excess_mortality <- read_excel("../DATA/RAW/10_WHO_excess_mortality_COVID_by_country_clean.xlsx",
                                sheet = "Sheet2") %>%
   clean_names() %>%
   select(
@@ -89,10 +89,50 @@ excess_mortality <- read_excel("10_WHO_excess_mortality_COVID_by_country_clean.x
   )
 ```
 
+```{r}
+temp_pop <- read_csv("../DATA/RAW/11_worldbank_population_2020_2021.csv",
+                     skip = 4) %>%
+  clean_names()
+
+names(temp_pop)
+head(temp_pop, 3)
+```
+```{r}
+temp_pop <- read_csv("../DATA/RAW/11_worldbank_population_2020_2021.csv",
+                     skip = 3) %>%
+  clean_names()
+
+names(temp_pop)
+```
+
+
+```{r}
+## Población total (World Bank)
+
+library(tidyverse)
+library(janitor)
+
+population <- read_csv("../DATA/RAW/11_worldbank_population_2020_2021.csv",
+                       skip = 0,
+                       col_names = c("country", "iso3", "indicator", 
+                                     "code", "pop_2020", "pop_2021")) %>%
+  filter(!is.na(iso3) & nchar(iso3) == 3) %>%
+  filter(str_detect(iso3, "^[A-Z]{3}$")) %>%
+  mutate(
+    pop_2020 = as.numeric(pop_2020),
+    pop_2021 = as.numeric(pop_2021),
+    population_mean = rowMeans(cbind(pop_2020, pop_2021), na.rm = TRUE)
+  ) %>%
+  select(iso3, population_mean)
+
+cat("Población:", nrow(population), "países\n")
+```
+
+
 ## 5. Clasificación de ingresos (World Bank OGHIST)
 
 ```{r}
-temp <- read_excel("08_worldbank_income_classification_OGHIST.xlsx",
+temp <- read_excel("../DATA/RAW/08_worldbank_income_classification_OGHIST.xlsx",
                    sheet = "Country Analytical History",
                    skip = 5) %>%
   clean_names()
@@ -100,9 +140,8 @@ temp <- read_excel("08_worldbank_income_classification_OGHIST.xlsx",
 names(temp)  # ver TODOS los nombres
 ```
 
-
 ```{r}
-income <- read_excel("08_worldbank_income_classification_OGHIST.xlsx",
+income <- read_excel("../DATA/RAW/08_worldbank_income_classification_OGHIST.xlsx",
                      sheet = "Country Analytical History",
                      skip = 5) %>%
   clean_names() %>%
@@ -135,6 +174,7 @@ income <- read_excel("08_worldbank_income_classification_OGHIST.xlsx",
 cat("Filas:", nrow(income), "\n")
 glimpse(income)
 ```
+
 ```{r}
 cat("suicide:", n_distinct(suicide$iso3), "países\n")
 cat("psychiatrists:", n_distinct(psychiatrists$iso3), "países\n")
@@ -142,10 +182,11 @@ cat("income:", n_distinct(income$iso3), "países\n")
 cat("excess_mortality:", n_distinct(excess_mortality$iso3), "países\n")
 cat("uhc:", n_distinct(uhc$iso3), "países\n")
 ```
+
 ```{r}
 ## Cargar physicians
 
-physicians <- read_csv("04_physicians_WHO_clean.csv") %>%
+physicians <- read_csv("../DATA/RAW/04_physicians_WHO_clean.csv") %>%
   clean_names() %>%
   select(
     country = geo_name_short,
@@ -164,13 +205,15 @@ physicians <- read_csv("04_physicians_WHO_clean.csv") %>%
 
 cat("Physicians:", nrow(physicians), "países\n")
 ```
+
 ```{r}
-temp_unicef <- read_excel("09_UNICEF_mental_health_2030_filtered_2010_2021.xlsx") %>%
+temp_unicef <- read_excel("../DATA/RAW/09_UNICEF_mental_health_2030_filtered_2010_2021.xlsx") %>%
   clean_names()
 
 names(temp_unicef)
 head(temp_unicef, 3)
 ```
+
 ```{r}
 temp_unicef %>%
   filter(str_detect(indicator, 
@@ -178,10 +221,11 @@ temp_unicef %>%
   select(indicator) %>%
   distinct()
 ```
+
 ```{r}
 ## Cargar y procesar UNICEF Mental Health 2030
 
-unicef_mh <- read_excel("09_UNICEF_mental_health_2030_FULL_backup.xlsx") %>%
+unicef_mh <- read_excel("../DATA/RAW/09_UNICEF_mental_health_2030_FULL_backup.xlsx") %>%
   clean_names() %>%
   filter(indicator %in% c(
     "Total number of psychiatrists (per 100,000 population)",
@@ -209,10 +253,44 @@ cat("UNICEF MH países:", nrow(unicef_mh), "\n")
 glimpse(unicef_mh)
 ```
 
-
 ```{r}
-## Merge final actualizado
+suicide_delta <- suicide %>%
+  mutate(period = ifelse(year <= 2019, "pre", "pandemic")) %>%
+  group_by(iso3, country, period) %>%
+  summarise(mean_rate = mean(suicide_rate, na.rm = TRUE), 
+            .groups = "drop") %>%
+  pivot_wider(names_from = period, 
+              values_from = mean_rate) %>%
+  mutate(delta_suicide = pandemic - pre) %>%
+  select(iso3, country, 
+         rate_pre = pre, 
+         rate_pandemic = pandemic, 
+         delta_suicide)
 
+cat("Países con delta:", nrow(suicide_delta), "\n")
+```
+```{r}
+income_mode <- income %>%
+  filter(!is.na(income_group)) %>%
+  group_by(iso3) %>%
+  summarise(
+    income_group = names(which.max(table(income_group))),
+    .groups = "drop"
+  )
+
+cat("Income mode:", nrow(income_mode), "\n")
+```
+```{r}
+uhc_mean <- uhc %>%
+  group_by(iso3) %>%
+  summarise(uhc_index_mean = mean(uhc_index, na.rm = TRUE),
+            .groups = "drop")
+
+cat("UHC mean:", nrow(uhc_mean), "\n")
+```
+
+merge
+```{r}
 dataset <- suicide_delta %>%
   left_join(income_mode, by = "iso3") %>%
   left_join(unicef_mh, by = "iso3") %>%
@@ -220,30 +298,26 @@ dataset <- suicide_delta %>%
   left_join(uhc_mean, by = "iso3") %>%
   left_join(excess_mortality %>%
               select(iso3, excess_mortality_covid),
-            by = "iso3")
+            by = "iso3") %>%
+  left_join(population, by = "iso3") %>%
+  mutate(
+    excess_mortality_per_100k = (excess_mortality_covid / population_mean) * 100000
+  )
 
 cat("Dataset final:", nrow(dataset), "países\n")
 cat("Columnas:", ncol(dataset), "\n")
-
-# Missing values
-cat("\nValores faltantes:\n")
 colSums(is.na(dataset))
 ```
-
-```{r}
 ## Guardar dataset analítico final
 
-write_csv(dataset, "C:/Users/CAMILA/OneDrive - UNIVERSIDAD DE INGENIERIA Y TECNOLOGIA/Documents/ProyectoBiostats/DATA/CLEAN/dataset_analitico_final.csv")
 
-cat("Dataset guardado exitosamente\n")
-cat("Ruta: DATA/CLEAN/dataset_analitico_final.csv\n")
-
-# Verificar missing values por columna
-cat("\nValores faltantes por variable:\n")
-colSums(is.na(dataset))
+```{r}
+write_csv(dataset, "../DATA/CLEAN/dataset_analitico_final.csv")
+cat("Dataset guardado con", nrow(dataset), "países y", ncol(dataset), "columnas\n")
 ```
 
 Revisión rápida
+
 ```{r}
 ## Revisión final del dataset
 
@@ -272,5 +346,3 @@ dataset %>%
   select(country, income_group) %>%
   print(n = 50)
 ```
-
-
