@@ -1,5 +1,3 @@
-# suicide-structural-determinants-2026
-
 # Structural Determinants of Heterogeneous Suicide Mortality Trends
 ## During the COVID-19 Pandemic: A Global Ecological Analysis (2010–2021)
 
