@@ -8,26 +8,189 @@ editor: visual
 ---
 
 ## Setup
-
 ```{r}
-#| message: false
-#| warning: false
-
 library(tidyverse)
-library(readxl)
 library(janitor)
-library(knitr)
-library(kableExtra)
+library(gt)
+library(countrycode)
 
 # Cargar dataset analítico
 dataset <- read_csv("../DATA/CLEAN/dataset_analitico_final.csv")
 
 # Agregar región geográfica
 dataset <- dataset %>%
-  mutate(region = countrycode::countrycode(iso3, 
-                                           origin = "iso3c", 
-                                           destination = "region"))
+  mutate(region = countrycode(iso3, 
+                              origin = "iso3c", 
+                              destination = "region"))
 
 cat("Dataset cargado:", nrow(dataset), "países\n")
-glimpse(dataset)
+cat("Columnas:", names(dataset), "\n")
 ```
+
+```{r}
+## Tabla 1 — Características por grupo de ingreso
+
+tabla1 <- dataset %>%
+  filter(!is.na(income_group)) %>%
+  mutate(income_group = factor(income_group, 
+                               levels = c("Low income", 
+                                          "Lower middle income",
+                                          "Upper middle income", 
+                                          "High income"))) %>%
+  group_by(income_group) %>%
+  summarise(
+    n = n(),
+    rate_pre = paste0(round(median(rate_pre, na.rm=TRUE),1),
+                      " (", round(quantile(rate_pre, 0.25, na.rm=TRUE),1),
+                      "–", round(quantile(rate_pre, 0.75, na.rm=TRUE),1), ")"),
+    rate_pandemic = paste0(round(median(rate_pandemic, na.rm=TRUE),1),
+                           " (", round(quantile(rate_pandemic, 0.25, na.rm=TRUE),1),
+                           "–", round(quantile(rate_pandemic, 0.75, na.rm=TRUE),1), ")"),
+    delta = paste0(round(median(delta_suicide, na.rm=TRUE),2),
+                   " (", round(quantile(delta_suicide, 0.25, na.rm=TRUE),2),
+                   "–", round(quantile(delta_suicide, 0.75, na.rm=TRUE),2), ")"),
+    psychiatrists = paste0(round(median(psychiatrists_unicef, na.rm=TRUE),2),
+                           " (", round(quantile(psychiatrists_unicef, 0.25, na.rm=TRUE),2),
+                           "–", round(quantile(psychiatrists_unicef, 0.75, na.rm=TRUE),2), ")"),
+    uhc = paste0(round(median(uhc_index_mean, na.rm=TRUE),1),
+                 " (", round(quantile(uhc_index_mean, 0.25, na.rm=TRUE),1),
+                 "–", round(quantile(uhc_index_mean, 0.75, na.rm=TRUE),1), ")"),
+    excess_covid = paste0(round(median(excess_mortality_per_100k, na.rm=TRUE),1),
+                          " (", round(quantile(excess_mortality_per_100k, 0.25, na.rm=TRUE),1),
+                          "–", round(quantile(excess_mortality_per_100k, 0.75, na.rm=TRUE),1), ")"),
+    .groups = "drop"
+  )
+
+kw_pvals <- tibble(
+  income_group = "p-value (K-W)",
+  n = NA_character_,
+  rate_pre = ifelse(kruskal.test(rate_pre ~ income_group, data=dataset)$p.value < 0.001,
+                    "<0.001", as.character(round(kruskal.test(rate_pre ~ income_group, data=dataset)$p.value, 3))),
+  rate_pandemic = ifelse(kruskal.test(rate_pandemic ~ income_group, data=dataset)$p.value < 0.001,
+                         "<0.001", as.character(round(kruskal.test(rate_pandemic ~ income_group, data=dataset)$p.value, 3))),
+  delta = ifelse(kruskal.test(delta_suicide ~ income_group, data=dataset)$p.value < 0.001,
+                 "<0.001", as.character(round(kruskal.test(delta_suicide ~ income_group, data=dataset)$p.value, 3))),
+  psychiatrists = ifelse(kruskal.test(psychiatrists_unicef ~ income_group, data=dataset)$p.value < 0.001,
+                         "<0.001", as.character(round(kruskal.test(psychiatrists_unicef ~ income_group, data=dataset)$p.value, 3))),
+  uhc = ifelse(kruskal.test(uhc_index_mean ~ income_group, data=dataset)$p.value < 0.001,
+               "<0.001", as.character(round(kruskal.test(uhc_index_mean ~ income_group, data=dataset)$p.value, 3))),
+  excess_covid = ifelse(kruskal.test(excess_mortality_per_100k ~ income_group, data=dataset)$p.value < 0.001,
+                        "<0.001", as.character(round(kruskal.test(excess_mortality_per_100k ~ income_group, data=dataset)$p.value, 3)))
+)
+
+# También convertir n a character en tabla1
+tabla1 <- tabla1 %>%
+  mutate(n = as.character(n))
+
+tabla1_final <- bind_rows(tabla1, kw_pvals)
+tabla1_final <- tabla1_final %>%
+  mutate(n = ifelse(is.na(n), "—", n))
+## Mostrar Tabla 1
+
+tabla1_final %>%
+  gt() %>%
+  tab_header(
+    title = md("**Table 1. Suicide mortality rates and structural indicators by income group**")
+  ) %>%
+  cols_label(
+    income_group = "Income group",
+    n = "N",
+    rate_pre = "Pre-pandemic rate",
+    rate_pandemic = "Pandemic rate",
+    delta = "Delta (Δ)",
+    psychiatrists = "Psychiatrists/100k",
+    uhc = "UHC index",
+    excess_covid = "Excess mortality/100k"
+  ) %>%
+  tab_footnote(
+    footnote = md("*Note.* Values expressed as median (Q1–Q3). Suicide rates per 100,000 population, age-standardized. The bottom row shows p-values from Kruskal–Wallis tests.")
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = income_group == "p-value (K-W)")
+  ) %>%
+  cols_align(align = "center")
+```
+```{r}
+## Guardar Tabla 1 como imagen
+
+# Instalar webshot2 si no lo tienes
+# install.packages("webshot2")
+
+library(webshot2)
+
+tabla1_final %>%
+  mutate(n = ifelse(is.na(n), "—", n)) %>%
+  gt() %>%
+  tab_header(
+    title = md("**Table 1. Suicide mortality rates and structural indicators by income group**")
+  ) %>%
+  cols_label(
+    income_group = "Income group",
+    n = "N",
+    rate_pre = "Pre-pandemic rate",
+    rate_pandemic = "Pandemic rate",
+    delta = "Delta (Δ)",
+    psychiatrists = "Psychiatrists/100k",
+    uhc = "UHC index",
+    excess_covid = "Excess mortality/100k"
+  ) %>%
+  tab_footnote(
+    footnote = md("*Note.* Values expressed as median (Q1–Q3). Suicide rates per 100,000 population, age-standardized. The bottom row shows p-values from Kruskal–Wallis tests.")
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = income_group == "p-value (K-W)")
+  ) %>%
+  cols_align(align = "center") %>%
+  gtsave("../OUTPUTS/Table1_suicide_structural_indicators.png",
+         zoom = 2,
+         expand = 10)
+
+cat("Tabla guardada en OUTPUTS/\n")
+```
+```{r}
+tabla1_final %>%
+  mutate(n = ifelse(is.na(n), "—", n)) %>%
+  gt() %>%
+  tab_header(
+    title = md("**Table 1.** Suicide mortality rates and structural indicators by income group")
+  ) %>%
+  cols_label(
+    income_group = "Income group",
+    n = "N",
+    rate_pre = "Pre-pandemic rate",
+    rate_pandemic = "Pandemic rate",
+    delta = "Delta (Δ)",
+    psychiatrists = "Psychiatrists/100k",
+    uhc = "UHC index",
+    excess_covid = "Excess mortality/100k"
+  ) %>%
+  tab_footnote(
+    footnote = md("*Note.* Values expressed as median (Q1–Q3). Suicide rates per 100,000 population, age-standardized. The bottom row shows p-values from Kruskal–Wallis tests.")
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = income_group == "p-value (K-W)")
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) %>%
+  tab_options(
+    table.border.top.style = "solid",
+    table.border.top.width = px(2),
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(2),
+    column_labels.border.bottom.style = "solid",
+    column_labels.border.bottom.width = px(1),
+    table_body.hlines.style = "none",  # sin líneas horizontales internas
+    table.font.size = px(12),
+    data_row.padding = px(6)
+  ) %>%
+  cols_align(align = "center", columns = -income_group) %>%
+  cols_align(align = "left", columns = income_group) %>%
+  gtsave("../OUTPUTS/Table1_suicide_structural_indicators.png",
+         zoom = 2, expand = 10)
+```
+
